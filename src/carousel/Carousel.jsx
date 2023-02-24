@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import CarouseItem from "./CarouseItem";
 import "./carousel.css";
 import CarouselControls from "./CarouselControls";
+import CarouselIndicator from "./CarouselIndicator";
 
 const Carousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -56,6 +57,7 @@ const Carousel = ({ slides }) => {
           />
         ))}
       </div>
+      <CarouselIndicator slides={slides} currentIndex={currentSlide} />
       <CarouselControls prev={prev} next={next} />
     </div>
   );
