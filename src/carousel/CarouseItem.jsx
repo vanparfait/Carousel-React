@@ -1,8 +1,12 @@
 import React from "react";
 
-const CarouseItem = ({ slide }) => {
+const CarouseItem = ({ slide, stopSlide, startSlide }) => {
   return (
-    <div className="carousel-item">
+    <div
+      className="carousel-item"
+      onMouseEnter={stopSlide}
+      onMouseOut={startSlide}
+    >
       <img src={slide} alt="personne" />
     </div>
   );
